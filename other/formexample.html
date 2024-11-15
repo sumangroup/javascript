@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form</title>
+    <style>
+        fieldset {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Form Example</h1>
+    <form action="">
+        <fieldset>
+            <legend>Studnet Information</legend>
+            <p>
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname">
+            </p>
+            <p>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="birthday">Birthday:</label>
+                <input type="date" name="birthday" id="birthday">
+            </p>
+            <p>
+                <button onclick="display()" type="button">Submit</button>
+            </p>
+        </fieldset>
+    </form>
+    <p id="dfname">
+
+    </p>
+    <p id="dlname">
+
+    </p>
+    <p id="demail">
+
+    </p>
+    <p id="ddate">
+
+    </p>
+    <script>
+        function display(){
+            let fname=document.getElementById("fname").value;
+            document.getElementById("dfname").innerHTML=fname;
+            let lname=document.getElementById("lname").value;
+            document.getElementById("dlname").innerHTML=lname;
+            let email=document.getElementById("email").value;
+            document.getElementById("demail").innerHTML=email;
+            let date=document.getElementById("date").value;
+            document.getElementById("ddate").innerHTML=date;
+        }
+        document.write(document.forms[0]);
+    </script>
+    
+</body>
+
+</html>

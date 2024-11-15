@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Quantifier {x}
+    </title>
+</head>
+
+<body>
+    <h1>Quantifier {x}</h1>
+    <p id="getPattern">
+        100, 1000 or 10000?
+    </p>
+    <p id="setPattern">
+
+    </p>
+    <button onclick="myfunction()">Click</button>
+    <script>
+        function myfunction() {
+            var str = document.getElementById("getPattern").innerHTML;
+            var pattern = /\d{2,4}/g;
+            var result = str.match(pattern);
+            document.getElementById("setPattern").innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>

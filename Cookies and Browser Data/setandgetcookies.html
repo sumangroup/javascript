@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>set and get cookies</h1>
+    <form action="" name="myform">
+        <label for="name">Enter your name</label>
+        <input type="text" name="person" id="person"><br>
+        <input type="button" value="set cookies" onclick="writeCookies()">
+        <input type="button" value="get cookies" onclick="readCookies()">
+    </form>
+    <p id="demo">
+
+    </p>
+    <script>
+        function writeCookies(){
+            var d=new Date();
+            d.setTime(d.getTime()+(100*(60*60*24)));
+            var name=document.getElementById("person").value;
+            document.cookie="cookies2= "+name+";expires="+d.toGMTString()+"SameSite:yes";
+            alert("Cookies written: ");
+        }
+        function readCookies(){
+            var x;
+            if(document.cookie==""){
+                x="";
+            }
+            else{
+                x=document.cookie;
+                document.getElementById("demo").innerHTML=x;
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">
+
+    </p>
+    <p id="demo1">
+
+    </p>
+    <script>
+        document.cookie="cookies1=Raju Mane; expires=Fri,09 Nov 2024 15:15:15 GMT";
+        if(document.cookie){
+            document.getElementById("demo").innerHTML="create cookies "+document.cookie;
+            cstr=document.cookie;
+            var list=cstr.split("=");
+            console.log(list);
+            if(list[0]=="cookies1"){
+                var data=list[1]
+                document.getElementById("demo1").innerHTML=data;
+            }
+        }
+    </script>
+    
+</body>
+</html>

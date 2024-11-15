@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code for count the number of p tags and h2 tags</h1>
+    <div>
+        <p>
+            Raju Mane
+        </p>
+        <p>
+            Dipti Shah
+        </p>
+        <p>
+            Omkar
+        </p>
+        <p>
+            Rashi
+        </p>
+    </div>
+    <div>
+        <h2> title 1</h2>
+        <h2> title 2</h2>
+    </div>
+    <button type="button" onclick="myfunction()">click it</button>
+    
+   
+    
+    <script>
+        function myfunction(){
+            let x=document.getElementsByTagName('p');
+            let y=document.getElementsByTagName('h2');
+            let z=document.createElement("div");
+            z.innerText="No of p tags is "+x.length+" no of h2 tags is "+y.length;
+            document.body.appendChild(z);
+            
+        }
+    </script>
+</body>
+</html>

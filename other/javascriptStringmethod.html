@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Method</title>
+</head>
+<body>
+    <h1>JavaScript String Method</h1>
+    <p id="original_string"></p>
+    <p id="original_length"></p>
+    <p id="original_charAt"></p>
+    <p id="original_charCodeAt"></p>
+    <p id="original_at"></p>
+    <p id="original_slice"></p>
+    <p id="original_substr"></p>
+    <p id="original_trim"></p>
+    <p id="original_replace"></p>
+    <p id="original_split"></p>
+    <script>
+        let text="   HELLO WORLD   ";
+        let text1="10,20,30,40,50";
+        document.getElementById("original_string").innerHTML="original_string: "+text;
+        document.getElementById("original_length").innerHTML="original_length: "+text.length;
+        document.getElementById("original_charAt").innerHTML="original_charAt: "+text.charAt(1);
+        document.getElementById("original_charCodeAt").innerHTML="original_charCodeAt: "+text.charCodeAt(1);
+        document.getElementById("original_at").innerHTML="original_at: "+text.at(1);
+        document.getElementById("original_slice").innerHTML="original_slice: "+text.slice(1,8);
+        document.getElementById("original_substr").innerHTML="original_substr: "+text.substr(1,8);
+        document.getElementById("original_trim").innerHTML="original_trim: "+text.trim();
+        document.getElementById("original_replace").innerHTML="original_replace: "+text.replace("WORLD","WORD");
+        document.getElementById("original_split").innerHTML="original_replace: "+text1.split(",");
+    </script>
+</body>
+</html>

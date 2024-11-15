@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Multiple action
+        </title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <img id="i1" src="img1.jpg" alt="img1" width="500px" height="500px" onmousemove="update_details()" onmouseout="rendo_details()">
+                </td>
+                <td id="details">
+                    <h1>image1</h1><br>
+                    
+                </td>
+            </tr>
+        </table>
+            <script>
+                function update_details(){
+                    let img=document.getElementById("i1");
+                    img.src='img2.jpg';
+                    let detials=document.getElementById("details");
+                    detials.textContent='img2'
+                }
+                function rendo_details(){
+                    let img=document.getElementById("i1");
+                    img.src='img1.jpg';
+                    let detials=document.getElementById("details");
+                    detials.textContent='img1'
+                }
+            </script>
+    
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creating the web page in new windows</h1>
+    <input type="button" value="New web page" onclick="newWindows()">
+    <script>
+        function newWindows(){
+            var winobj=window.open("","winname","width=500,height=500,left=200,top=300");
+            winobj.document.write("<html>");
+            winobj.document.write("<head>");
+            winobj.document.write("<title>web page</title>");
+            winobj.document.write("</head>");
+            winobj.document.write("<body>");
+            winobj.document.write("<h1>welcome");
+            winobj.document.write("</h1>");
+            winobj.document.write("</body>");
+            winobj.document.write("</html>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            onclick event
+        </title>
+    </head>
+    <body>
+        <h1> onclick event</h1>
+        <p onmousedown="myfunction1()">
+          click here for mouse down
+        </p>
+        <p id="demo1">
+
+        </p>
+        <p onmouseenter="myfunction2()">
+            click here for mouse enter
+          </p>
+          <p id="demo2">
+  
+          </p>
+          <p onmouseleave="myfunction3()">
+            click here for mouse leave
+          </p>
+          <p id="demo3">
+  
+          </p>
+          <p onmousemove="myfunction4()">
+            click here for mouse move
+          </p>
+          <p id="demo4">
+  
+          </p>
+          <p onmouseout="myfunction5()">
+            click here for mouse out
+          </p>
+          <p id="demo5">
+  
+          </p>
+          <p onmouseup="myfunction6()">
+            click here for mouse out
+          </p>
+          <p id="demo6">
+  
+          </p>
+        <script>
+            function myfunction1(){
+                document.getElementById("demo1").innerHTML="hello javascript onmousedown"
+                document.getElementById("demo1").style.color='red'
+            }
+            function myfunction2(){
+                document.getElementById("demo2").innerHTML="hello javascript onmouseenter"
+                document.getElementById("demo2").style.color='green'
+            }
+            function myfunction3(){
+                document.getElementById("demo3").innerHTML="hello javascript onmouseleave"
+                document.getElementById("demo3").style.color='blue'
+            }
+            function myfunction4(){
+                document.getElementById("demo4").innerHTML="hello javascript onmousemove"
+                document.getElementById("demo4").style.color='pink'
+            }
+            function myfunction5(){
+                document.getElementById("demo5").innerHTML="hello javascript onmouseout"
+                document.getElementById("demo5").style.color='purple'
+            }
+            function myfunction6(){
+                document.getElementById("demo6").innerHTML="hello javascript onmouseup"
+                document.getElementById("demo6").style.color='purple'
+            }
+        </script>
+    </body>
+</html>

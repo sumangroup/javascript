@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>change text</h1>
+    <p id="demo">
+        Hello JavaScript 
+    </p>
+    Name: <input type="text" name="" id="userInputName" value=""><br><br>
+    <input type="button" value="change text" onclick="changetext()">
+  
+    <script>
+        function changetext(){
+            let username=document.getElementById("userInputName").value;
+            document.getElementById("demo").innerHTML="Hello "+username;
+           alert("text is change");
+        }
+        
+    </script>
+</body>
+</html>

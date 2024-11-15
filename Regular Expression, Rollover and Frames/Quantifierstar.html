@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Quantifier *
+    </title>
+</head>
+
+<body>
+    <h1>Quantifier *</h1>
+    <p id="getPattern">
+        Hellooo World! Hello W3Schools!
+    </p>
+    <p id="setPattern">
+
+    </p>
+    <button onclick="myfunction()">Click</button>
+    <script>
+        function myfunction() {
+            var str = document.getElementById("getPattern").innerHTML;
+            var pattern = /lo*/g;
+            var result = str.match(pattern);
+            document.getElementById("setPattern").innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>

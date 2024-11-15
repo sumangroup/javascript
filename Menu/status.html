@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="displayBanner()">
+    <center> <a href="javascript:linkBanner()"> <img src="1.jpg" alt="1.jpg" width="600" height="450" name="rotateBanner"></a> </center>
+    <script>
+        banner=new Array('1.jpg','2.jpg','3.jpg')
+        bannerlink=new Array('google.com/','vpt.edu.in/','msbte.org.in/')
+        currentBanner=0;
+        function linkBanner(){
+            document.location.href='https://www.'+bannerlink[currentBanner]
+        }
+        function displayBanner(){
+            if(document.images){
+                currentBanner++;
+                if(currentBanner==banner.length){
+                    currentBanner=0;
+                }
+                document.rotateBanner.src=banner[currentBanner];
+                setTimeout("displayBanner()",3000);
+            }
+        }
+    </script>
+</body>
+</html>

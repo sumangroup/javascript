@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>getElementsByTagName() method</h1>
+    <fieldset>
+        <legend>getElementsByTagName()</legend>
+        <ol type="A">
+            <li>Information Technology</li>
+            <li>Computer Engineering</li>
+            <li>Chemical Engineering</li>
+        </ol>
+        <p>Click the button to find out how many li elements there are in this document. </p>
+        <button type="button" onclick="myfunction()">click it</button>
+        <script>
+            function myfunction(){
+                let x=document.getElementsByTagName("li");
+              console.log(x);   
+              var i;
+              for(i=0;i<x.length;i++){
+                x[i].style.fontSize=18;
+                x[i].style.color="green";
+                x[i].style.backgroundColor="pink";
+              }
+             
+            }
+        </script>
+    </fieldset>
+</body>
+
+</html>

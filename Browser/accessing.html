@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Accessing field value by document object</h1>
+    <form action="" name="form1">
+        Enter Name:
+        <input type="text" name="name" id="">
+        <input type="button" value="submit" onclick="printvalue()">
+    </form>
+    <script>
+        function printvalue() {
+            var name = document.form1.name.value;
+            alert("Welcome: " + name);
+            console.log(document.getElementsByName("form1"));
+        }
+
+    </script>
+</body>
+
+</html>

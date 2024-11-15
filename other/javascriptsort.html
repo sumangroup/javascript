@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sort</title>
+</head>
+<body>
+   <h1>JavaScript Sort</h1>
+   <p id="fruits_display"></p>
+   <p id="fruits_sort"> </p>
+   <p id="fruits_reverse"> </p>
+   <p id="fruits_indexof"> </p>
+
+   <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("fruits_display").innerHTML=+"Original array: "+fruits;
+
+    // sorting an array
+    document.getElementById("fruits_sort").innerHTML="Sort array: "+fruits.sort();
+
+    // reverse an array
+    document.getElementById("fruits_reverse").innerHTML="Reverse array: "+fruits.reverse();
+
+    //fruits_indexof
+    document.getElementById("fruits_indexof").innerHTML="fruits indexof: "+fruits.indexOf("Apple");
+
+   
+
+   </script>
+</body>
+</html>

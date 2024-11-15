@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        validate form
+    </title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>User form</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name"><br><br>
+            <label for="userid">User Id:</label>
+            <input type="text" id="userid"><br><br>
+            <label for="addhar">Addhar No:</label>
+            <input type="text" id="addharid"><br><br>
+           <button onclick="display()" type="button">Submit</button>
+        </fieldset>
+    </form>
+    <script>
+        function display() {
+            let name=document.getElementById("name").value;
+            let user = document.getElementById("userid").value;
+            let addhar = document.getElementById("addharid").value;
+            console.log(user);
+            if (user.length == 0 || addhar.length == 0 || name.length==0) {
+                alert("please enter the all fields");
+            }
+            else {
+                let reg_name=/^[a-zA-Z\s'-]+$/;
+                let reg_user = /^[A-Z]{1}[a-zA-Z0-9]{9}$/g;
+                let reg_addhar=/^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/;
+                if(reg_name.test(name)){
+                    alert("Name is correct");
+                }
+                else{
+                    alert("Name is wrong");
+                }
+                if (reg_user.test(user)) {
+                    alert("Userid is correct");
+                }
+                else {
+                    alert("Userid is wrong");
+                }
+                if(reg_addhar.test(addhar)){
+                    alert("Addhar is correct");
+                }
+                else{
+                    alert("Addhar is wrong");
+                }
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

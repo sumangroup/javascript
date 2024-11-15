@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Text Rollover
+        </title>
+    </head>
+    <body>
+    <p id="demo" onmouseover="mouseover()" onmouseout="mouseout()">
+        hello javascript
+    </p>
+    <script>
+        function mouseover(){
+            let val=document.getElementById("demo")
+            val.textContent="I am javascript. I am client-side language"
+            val.style.color='green'
+        }
+        function mouseout(){
+            let val=document.getElementById("demo")
+            val.textContent="hello javascript"
+            val.style.color='black'
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example</title>
+</head>
+<style>
+
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+</style>
+
+<body>
+    <h1>Example 5a</h1>
+    <table ">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>Pin code</td>
+            <td><input type="text" id="pincode"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" id="" value="Submit" onclick="submit()"></td>
+        </tr>
+    </table>
+    
+    <script>
+        function submit(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let pincode=document.getElementById("pincode").value;
+            if(name.length==0||email.length==0||pincode.length==0){
+                alert("Please enter value in all fields")
+            }
+            else{
+                let pinpatter=/^[4]{1}[0-9]{5}$/g;
+                if(pinpatter.test(pincode)){
+                    alert('perfect pincode');
+                }
+                else{
+                    alert('wrong pincode');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

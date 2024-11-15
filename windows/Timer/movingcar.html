@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Moving car</h1>
+    <img src="car.jpg" alt="car" id="car"><br>
+    <input type="button" value="start" onclick="start()">
+    <input type="button" value="stop" onclick="stop()">
+    <script>
+        var obj;
+        var animate;
+        function init(){
+            obj=document.getElementById("car")
+            obj.style.position='relative';
+            obj.style.left='0px';
+        }
+        function start(){
+            obj.style.left=parseInt(obj.style.left)+10+'px';
+            animate=setTimeout(start,20);
+        }
+        function stop(){
+            clearInterval(animate);
+            obj.style.left='0px';
+        }
+        window.onload=init;
+    </script>
+</body>
+</html>

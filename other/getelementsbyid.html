@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+
+<body>
+    <h1>getElementById() method </h1>
+    <p id="demo" onmousemove="changecolor()" onmouseleave="backcolor()">Click the button to change the color of this paragraph.</p>
+    <button  type="button" >change color</button>
+    <script>
+        function changecolor(){
+            let x = document.getElementById("demo");
+            x.style.color = "red";
+        }
+        function backcolor(){
+            let x = document.getElementById("demo");
+            x.style.color = "black";
+        }
+    </script>
+</body>
+
+</html>

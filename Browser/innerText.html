@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>innerText</h1>
+    <form action="" name="myform">
+        <input type="password" name="userPass" id="" onkeyup="validate()">
+       <span id="mylocation"> </span>
+    </form>
+    <script>
+        function validate(){
+            var msg;
+            if(document.myform.userPass.value.length>5){
+                msg="good password";
+            }
+            else{
+                msg="password length short";
+            }
+            document.getElementById("mylocation").innerHTML=msg;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>moveTo() method</h1>
+    <input type="button" value="Create new windows" onclick="openWin()">
+    <input type="button" value="Move windows" onclick="moveWinTO()">
+    <input type="button" value="Move windows" onclick="moveWinBy()">
+    <script>
+        var mywindow;
+        function openWin(){
+            mywindow=window.open("hello.html","mywindows","width=250,height=250");
+        }
+        function moveWinTO(){
+            mywindow.moveTo(150,150);
+            mywindow.focuse();
+        }
+        function moveWinBy(){
+            mywindow.moveBy(75,50);
+            mywindow.focuse();
+        }
+    </script>
+</body>
+</html>

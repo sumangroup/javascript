@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change the content of windows</h1>
+    <input type="button" value="Google" onclick="openwin('https://www.google.com/')">
+    <input type="button" value="youtube" onclick="openwin('https://www.youtube.com/')">
+    <input type="button" value="chatgpt" onclick="openwin('https://chatgpt.com/')">
+    <script>
+        function openwin(ad){
+            window.open(ad,"windows name","width=500,height=500");
+        }
+    </script>
+</body>
+</html>

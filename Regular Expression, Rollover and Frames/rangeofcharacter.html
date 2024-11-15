@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Range of Character
+    </title>
+</head>
+
+<body>
+    <h1>Range of Character</h1>
+    <p id="getPattren">
+        12346789112462362148
+        everybody in this country should learn how to program, a computer because it teaches you how to think
+    </p>
+    <button onclick="myfucntion()">Click</button>
+    <p id="setPattern_match">
+
+    </p>
+    <p id="setPattern_exec">
+
+    </p>
+    <script>
+        function myfucntion() {
+            var str = document.getElementById("getPattren").innerHTML;
+            var pattern = /[^1/5/7]/g;
+            var result = str.match(pattern);
+            document.getElementById("setPattern_match").innerHTML = result;
+            
+        }
+
+    </script>
+</body>
+
+</html>

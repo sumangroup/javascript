@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>textarea</h1>
+    Address:<br>
+    <textarea name="" id="getaddress" cols="30" rows="10"></textarea><br>
+    <input type="button" value="submit" onclick="getAddress()">
+    <p id="putaddress">
+
+    </p>
+    <script>
+        function getAddress(){
+            let getadd=document.getElementById("getaddress").value;
+            document.getElementById("putaddress").innerHTML=getadd;
+        }
+    </script>
+</body>
+</html>

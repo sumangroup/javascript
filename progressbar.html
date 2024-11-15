@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myprogress{
+        width: 100%;
+        height: 30px;
+        position: relative;
+        background-color: #ddd;
+    }
+    #mybar{
+        background-color: #4caf50;
+        width: 5px;
+        height: 30px;
+        position: absolute;
+    }
+</style>
+<body>
+    <h1>javascript progress bar</h1>
+    <div id="myprogress"></div>
+    <div id="mybar"></div>
+    <br>
+    <input type="button" value="click" onclick="move()">
+    <script>
+        function move(){
+            var ele=document.getElementById("mybar");
+            var width=0;
+            var id=setInterval(frame,200);
+            function frame(){
+                if(width==100){
+                    clearInterval(id);
+                }
+                else{
+                    width++;
+                    ele.style.width=width+'%';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

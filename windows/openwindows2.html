@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Open and close the window</h1>
+    <input type="button" value="open windows" onclick="openWindows()">
+    <input type="button" value="close windows" onclick="closeWindows()">
+    <script>
+        var mywindows;
+        function openWindows(){
+            mywindows=window.open("hello.html","window Name","top=200,left=100,width=250,height=100")
+        }
+        function closeWindows(){
+            mywindows.close();
+        }
+      
+    </script>
+</body>
+</html>

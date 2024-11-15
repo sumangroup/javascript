@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rotate Images</h1>
+    <img src="download1.jpg" alt="1" id="pic">
+    <script>
+        var i, imgs, pics;
+        function init() {
+            pics = document.getElementById("pic");
+            imgs = ["download1.jpg", "download2.jpg", "download3.jpg", "download4.jpg"];
+            i = 0;
+            rotate();
+        }
+        function rotate() {
+            pics.src = imgs[i];
+            (i == (imgs.length - 1)) ? i = 0 : i++;
+            setTimeout(rotate, 1000);
+        }
+        document.addEventListener("DOMContentLoaded",init,false);
+
+    </script>
+</body>
+
+</html>

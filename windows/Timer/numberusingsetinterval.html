@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>print the number</h1>
+    <textarea name="" id="output" cols="30" rows="10"></textarea>
+    <input type="button" value="click" onclick="magic()">
+    <script>
+        var number=0;
+        var timeid;
+        function magic(){
+            timeid=setInterval(display,1000);
+        }
+        function display(){
+            if(number>15){
+                clearInterval(timeid);
+            }
+            else{
+                document.getElementById("output").innerHTML=document.getElementById("output").innerHTML+" "+number;
+                number=number+1;
+            }
+        }
+    </script>
+</body>
+</html>

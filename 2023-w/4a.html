@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Search Pattern</title>
+    </head>
+    <body>
+        <h1>Search Pattern MSBTE</h1>
+        Enter the text:<br>
+        <textarea name="" id="txt" cols="30" rows="10"></textarea><br>
+        <input type="button" value="click" onclick="search()">
+        <p id="demo"></p>
+        <script>
+            function search(){
+                let text=document.getElementById("txt").value;
+                let reg=/MSBTE/g;
+                let result=reg.test(text);
+                if(result==true){
+                    document.getElementById("demo").innerHTML="Pattern Found";
+                }
+                else{
+                    document.getElementById("demo").innerHTML="Pattern not Found";
+                }
+            }
+        </script>
+    </body>
+</html>

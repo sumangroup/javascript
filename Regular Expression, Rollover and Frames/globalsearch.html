@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        global search
+    </title>
+</head>
+
+<body>
+    <h1>global search</h1>
+    <p id="getPattren">
+        Is An operating system (OS) is the program that, after being initially loaded into the computer by a boot program,
+        manages all of the other application programs in a computer. The application programs make use of the operating
+        system by making requests for services through a defined application program interface (API). In addition, users
+        can interact directly with the operating system through a user interface, such as a command-line interface (CLI)
+        or a graphical UI (GUI).
+    </p>
+    <p style="background-color: antiquewhite;">
+        Click the button to do a global search for the characters i and s in a string
+    </p>
+
+    <button onclick="globalSearch()">Try IT</button>
+    <p id="setPattren">
+
+    </p>
+    <script>
+        function globalSearch() {
+            var str = document.getElementById("getPattren").innerHTML;
+            var pattern = /[is]/i;
+            var result = str.match(pattern);
+            document.getElementById("setPattren").innerHTML = result;
+            document.getElementById("setPattren").style.fontSize = "x-large";
+        }
+    </script>
+
+</body>
+
+</html>

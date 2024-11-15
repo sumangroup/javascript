@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validation</title>
+</head>
+
+<body>
+    <h1>Validation of number</h1>
+    Enter the text:<br>
+    <textarea name="" id="txt" cols="30" rows="10"></textarea><br>
+    <input type="button" value="validate" onclick="validate()">
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        function validate() {
+            let text = document.getElementById("txt").value;
+            let exp = /^[a-zA-Z0-9.!#%&'*+/=?^$_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            let result = exp.test(text);
+            document.getElementById("demo1").innerHTML = result;
+            result = text.match(exp);
+            document.getElementById("demo2").innerHTML = result;
+
+            const regex = /^\(\d{3}\)-\(\d{8}\)$/;
+
+            // Example usage
+            const testString1 = "(123)-(45678901)";
+            const testString2 = "(12)-(4567890)";
+
+            console.log(regex.test(testString1)); // true
+            console.log(regex.test(testString2)); // false
+
+        }
+    </script>
+</body>
+
+</html>

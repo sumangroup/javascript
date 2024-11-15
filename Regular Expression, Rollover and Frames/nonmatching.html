@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Non Matching characters
+    </title>
+</head>
+
+<body>
+    <h1>Non Matching Characters</h1>
+    <label for="">Enter the text</label><br><br>
+    <textarea id="getpattren" rows="10" cols="50"></textarea ><br><br>
+    <input type="button" value="Check" onclick="check()">
+    <p id="setpattren"></p>
+    <script>
+        function check() {
+            var exp = /[^\*]/;
+            var str = document.getElementById("getpattren").value;
+            var res=exp.test(str)
+            document.getElementById("setpattren").innerHTML=res;
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>getElementsByName() method</h1>
+    <fieldset>
+        <legend>getElementsByName()</legend>
+        <input type="checkbox" name="program" id="" value="IF" >Information Technology<br>
+        <input type="checkbox" name="program" id="" value="CO">Computer Engineering<br>
+        <p>
+            Click the button to check all checkboxes that have a name attribute with the value
+            "program".
+        </p>
+        <button type="button" onclick="myfunction()">Click It </button>
+        <script>
+            function myfunction(){
+                let x=document.getElementsByName("program");
+                var i;
+                for(i=0;i<x.length;i++){
+                    if(x[i].type=="checkbox"){
+                        x[i].checked=true;
+                    }
+                }
+            }
+        </script>
+    </fieldset>
+</body>
+
+</html>

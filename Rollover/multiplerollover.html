@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Multiple rollover and rollback
+        </title>
+    </head>
+    <body>
+        <table border="1" style="width: 100%;">
+            <tr>
+                <td>
+                    <a href=""><img src="img1.jpg" alt="img1"  height="500px" name="clr"></a>
+                </td>
+                <td>
+                    <a onmousemove="open_new_window(1)" onmouseout="mwin.close()" href="">Red</a> <br>
+                    <a onmousemove="open_new_window(2)" onmouseout="mwin.close()" href="">Geen</a> <br>
+                    <a onmousemove="open_new_window(3)" onmouseout="mwin.close()" href="">Blue</a> <br>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function open_new_window(clrname){
+                if(clrname==1){
+                    document.clr.src="img2.jpg"
+                    mwin=window.open("",'myadmin','height=100,width=150,left=500,top=200');
+                    mwin.document.write("look like red color");
+                }
+                else if(clrname==2){
+                    document.clr.src="img3.jpg"
+                }
+                else if(clrname==3){
+                    document.clr.src="img1.jpg"
+                }
+            }
+        </script>
+    </body>
+</html>

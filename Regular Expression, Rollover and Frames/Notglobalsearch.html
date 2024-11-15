@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Not Global Search</title>
+</head>
+
+<body>
+    <h1>Not Global Search</h1>
+    <p id="getPattern">
+        12121212This is JavaScript
+    </p>
+    <p>
+        Click the button to do a global search for numbers that are NOT and in a
+        string
+    </p>
+    <button onclick="myfunction()"> Click</button>
+    <p id="setPattern">
+
+    </p>
+    <script>
+        function myfunction() {
+            var str = document.getElementById("getPattern").innerHTML;
+            var pattern = /[^1s]/gi;
+            var result = str.match(pattern);
+            document.getElementById("setPattern").innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>
