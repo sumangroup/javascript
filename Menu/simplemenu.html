@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select background color:
+    <select name="" id="color" onchange="changeColor()">
+        <option value=""></option>
+        <option value="white">white</option>
+        <option value="Black">Black</option>
+        <option value="Red">Red</option>
+    </select><br>
+ 
+    <script>
+       function changeColor(){
+        var color=document.getElementById("color").value;
+        switch(color){
+            case 'white':
+                document.body.style.backgroundColor="white";
+               
+                
+                break;
+            case 'Black':
+                document.body.style.backgroundColor="Black"
+                break;
+            case 'Red':
+                document.body.style.backgroundColor="Red"
+                break;
+        }
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            margin-bottom: 200%;
+        }
+        .floating-menu{
+            font-family: sans-serif;
+            background: yellowgreen;
+            padding: 5px;
+            width: 100%;
+            z-index: 100;
+            position: fixed;
+        }
+        .floating-menu a,.floating-menu h3{
+            font-size: x-large;
+            color: white;
+        }
+        nav{
+            border-bottom: 10%
+        }
+        p{
+            border-top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            scroll down and watch the menu remain fixed in the same position as thouh it was floating
+        </p>
+   
+        <nav class="floating-menu">
+            <h3>Floating Menu</h3>
+            <a href="">C</a>
+            <a href="">C++</a>
+            <a href="">Java</a>
+            <a href="">Python</a>
+        </nav>
+    </main>
+</body>
+</html>

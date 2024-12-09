@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Manual slideshow</h2>
+    <div>
+        <img src="1.jpg" alt="1" class="myslide">
+        <img src="2.jpg" alt="2" class="myslide">
+        <img src="3.jpg" alt="3" class="myslide">
+
+        <button class="aa" onclick="plusDivs(-1)">Back</button>
+        <button class="bb" onclick="plusDivs(1)">Forward</button>
+    </div>
+    <script>
+        var slideindex=1;
+        showDivs(slideindex);
+
+        function plusDivs(n){
+            showDivs(slideindex+=n)
+        }
+        function showDivs(n){
+            var n;
+            var x=document.getElementsByClassName("myslide");
+            if(n>x.length){
+                slideindex=1;
+            }
+            if(n<1){
+                slideindex=x.length;
+            }
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none"
+            }
+            x[slideindex-1].style.display="block";
+        }
+    </script>
+</body>
+</html>

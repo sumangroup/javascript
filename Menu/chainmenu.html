@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Chain menu
+    </h1>
+    <form action="" name="myform" id="myform">
+        <select name="optone" id="aaa" size="1">
+            <option value="" selected="selected">select state</option>
+        </select>
+        <br>
+        <br>
+        <select name="opttwo" id="bbb" size="1">
+            <option value="" selected="selected">Please select city first</option>
+        </select>
+        <br>
+        <br>
+        <select name="optthree" id="ccc" size="1">
+            <option value="" selected="selected">Please select  area first</option>
+        </select>
+    </form>
+    <script>
+        var stateObject={
+            "Maharashtra":
+            {
+                "Mumbai":["Worli","Dadar"],
+                "Pune":["Aundh","Kothrud"]
+            },
+            "Karnataka":{
+                "Banglore":["Mysoor","Ooty"]
+            },
+            
+        }
+        window.onload=function(){
+            var aaa=document.getElementById("aaa");
+            var bbb=document.getElementById("bbb");
+            var ccc=document.getElementById("ccc");
+
+            for(var state in stateObject){
+                aaa.options[aaa.options.length]=new Option(state,state)
+            }
+            aaa.onchange=function(){
+                bbb.length=1;
+                ccc.length=1;
+                if(this.selectIndex<1){
+                    bbb.options[0].text="Please select city first";
+                    ccc.options[0].text="Please select area first";
+                    return;
+                }
+                bbb.options[0].text="Please select city first"
+                for(var city_name in stateObject[this.value]){
+                    bbb.options[bbb.options.length]=new Option(city_name,city_name);
+                }
+                if(bbb.options.length==2){
+                    bbb.selectIndex=1;
+                    bbb.onchange();
+                }
+            }
+            aaa.onchange();
+            bbb.onchange=function(){
+                ccc.length=1;
+                if(this.selectIndex<1){
+                    ccc.options[0].text="Please select area first";
+                    return;
+                }
+                ccc.options[0].text="Please select area first";
+                var area=stateObject[aaa.value][this.value];
+                for(var i=0;i<area.length;i++){
+                    ccc.options[ccc.options.length]=new Option(area[i],area[i])
+                }
+                if(ccc.options.length==2){
+                    ccc.selectIndex=1;
+                    ccc.onchange();
+                }
+            }
+
+
+        }
+    </script>
+</body>
+</html>

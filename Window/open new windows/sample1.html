@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="open" onclick="openwindows()">
+    <input type="button" value="close" onclick="closewindows()">
+    <script>
+        var mywindows;
+        function openwindows(){
+            mywindows=window.open("https://vpt.edu.in/diploma/polytechnic/index.html","mywindows","width=200,height=100");
+        }
+        function closewindows(){
+            mywindows.close();
+        }
+    </script>
+</body>
+</html>

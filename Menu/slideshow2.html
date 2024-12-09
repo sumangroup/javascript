@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Manual slideshow</h2>
+    <div>
+        <img src="1.jpg" alt="1" class="myslide">
+        <img src="2.jpg" alt="2" class="myslide">
+        <img src="3.jpg" alt="3" class="myslide">
+
+        
+    </div>
+    <script>
+       var myindex=0;
+       auto_slide_show();
+       function auto_slide_show(){
+        var i;
+        var x=document.getElementsByClassName("myslide");
+        for(i=0;i<x.length;i++){
+            x[i].style.display="none";
+        }
+        myindex++;
+        if(myindex>x.length){
+            myindex=1;
+        }
+        x[myindex-1].style.display="block";
+        setTimeout(auto_slide_show,200);
+       }
+    </script>
+</body>
+</html>
