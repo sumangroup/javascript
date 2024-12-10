@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="setCookie" onclick="setCookie()">
+    <input type="button" value="getCookie" onclick="getCookie()">
+    <p id="demo">
+
+    </p>
+    <script>
+        function setCookie(){
+            document.cookie="cookies2=xyz;expries=Tus 10 dec 2024 00:00:00 GMT";
+        }
+        function getCookie(){
+            console.log(document.cookie);
+            var str="";
+            if(document.cookie.length!=0){
+                var array1=document.cookie.split(";");
+                for(i=0;i<array1.length;i++){
+                    var array2=array1[i].split("=");
+                    str=str+"name: "+array2[0]+" "+"value: "+array2[1]+"<br>";
+                }
+                document.getElementById("demo").innerHTML=str;
+                //console.log(array1);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manual Slideshow</h1>
+    <div>
+        <img src="dell.png" alt="dell" class="myslides" width="100" height="75">
+        <img src="hp.png" alt="dell" class="myslides" width="100" height="75">
+        <img src="lenovo.jpg" alt="dell" class="myslides" width="100" height="75">
+        <button class="aa" onclick="plusDivs(-1)">&#10094; Back</button>
+        <button class="aa" onclick="plusDivs(1)">&#10095; Forward</button>
+    </div>
+    <script>
+        var slideindex=1;
+        showDivs(slideindex);
+        function plusDivs(n){
+            showDivs(slideindex=slideindex+n);
+        }
+        function showDivs(n){
+            var i;
+            var x=document.getElementsByClassName("myslides");
+            if(n>x.length){
+                slideindex=1;
+            }
+            if(n<1){
+                slideindex=x.length;
+            }
+            for(i=0;i<x.length;i++){
+                x[i].style.display='none';
+            }
+            x[slideindex-1].style.display="block";
+        }
+    </script>
+</body>
+</html>

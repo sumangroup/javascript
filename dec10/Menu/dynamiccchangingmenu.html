@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+        <select name="optionList" id="" size="3">
+            <option value="1">Kiwi</option>
+            <option value="2">Pine-apple</option>
+            <option value="3">Apple</option>
+        </select><br>
+        <input type="radio" name="grp1" id="" value="1" checked="true" onclick="modifyList(this.value)">Fruits
+        <input type="radio" name="grp1" id="" value="2"  onclick="modifyList(this.value)">Vegitables
+    </form>
+    <script>
+        function modifyList(x){
+            with(document.forms.myform){
+                if(x==1){
+                    optionList[0].text="kiwi";
+                    optionList[0].value=1;
+                    optionList[1].text="Pine-apple";
+                    optionList[1].value=2;
+                    optionList[2].text="Apple";
+                    optionList[2].value=3;
+                    
+                }
+                if(x==2){
+                    optionList[0].text="tomato";
+                    optionList[0].value=1;
+                    optionList[1].text="onion";
+                    optionList[1].value=2;
+                    optionList[2].text="cabbage";
+                    optionList[2].value=3;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

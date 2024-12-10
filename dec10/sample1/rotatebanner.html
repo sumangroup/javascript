@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="displayBanner()">
+    <h1>Banner</h1>
+    <center>
+       <a href="javascript:linkBanner()"> <img src="dell.png" alt="dell" width="100" height="75" name="rotateBanner"></a>
+    </center>
+    <script>
+        Banner=new Array('dell.png','hp.png','lenovo.jpg');
+        BannerLink=new Array('google.com/','vpt.edu.in/','msbte.org.in/');
+        NumOfBanner=Banner.length;
+        currentBanner=0;
+        function linkBanner(){
+            document.location.href='http://www.'+BannerLink[currentBanner];
+        }
+        function displayBanner(){
+            if(document.images){
+                currentBanner++;
+                if(currentBanner==Banner.length){
+                    currentBanner=0;
+                }
+                document.rotateBanner.src=Banner[currentBanner];
+                setTimeout("displayBanner()",1000);
+            }
+        }
+    </script>
+</body>
+</html>
